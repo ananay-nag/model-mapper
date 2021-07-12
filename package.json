@@ -1,0 +1,37 @@
+{
+  "name": "@ananay-nag/model-mapper",
+  "version": "1.0.0",
+  "description": "map any plan object to another nested structuered object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ananay-nag/model-mapper.git"
+  },
+  "keywords": [
+    "obejct",
+    "map object",
+    "mapper",
+    "mapping",
+    "mapping model",
+    "mongo model",
+    "mapping object",
+    "structuer object",
+    "map",
+    "matched"
+  ],
+  "author": "ANANYA-NAG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ananay-nag/model-mapper/issues"
+  },
+  "homepage": "https://github.com/ananay-nag/model-mapper#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
