@@ -4,7 +4,8 @@
   "description": "map any plan object to another nested structuered object.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm ./lib && tsc"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,8 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
   }
 }
