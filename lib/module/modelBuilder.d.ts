@@ -6,4 +6,4 @@ import { IValidateModel } from "../common/common.interface";
  * @param buildModel | IValidateModel | new model builder
  * @returns | IValidateModel | new model builder
  */
-export declare function ModelBuilder(vm: IValidateModel, mb: IValidateModel, buildModel?: IValidateModel): IValidateModel;
+export declare function ModelBuilder(vm: IValidateModel, mb: IValidateModel, forceValidate?: Boolean, buildModel?: IValidateModel): IValidateModel;
