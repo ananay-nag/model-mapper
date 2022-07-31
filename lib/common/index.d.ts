@@ -4,6 +4,7 @@ export declare const ModelTypes: {
     NUMBER: string;
     STRING: string;
     BOOLEAN: string;
+    FUNCTION: string;
 };
 export declare const ModelDefaultValues: {
     ARRAY: never[];
@@ -11,4 +12,5 @@ export declare const ModelDefaultValues: {
     NUMBER: number;
     STRING: string;
     BOOLEAN: boolean;
+    FUNCTION: () => void;
 };
