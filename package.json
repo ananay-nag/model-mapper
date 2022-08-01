@@ -1,8 +1,8 @@
 {
   "name": "@ananay-nag/model-mapper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "map any plan object to another nested structuered object.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ./lib && tsc"
