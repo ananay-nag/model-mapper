@@ -7,24 +7,25 @@
 
 # Version-
 
-`@ananay-nag/model-mapper` has released version `1.0.1`.
+`@ananay-nag/model-mapper` has released version `1.0.2`.
 
-### v1.0.1 Feature -
+### v1.0.2 Feature -
 
 - map key with rename it.
 - map values with data validation.
 - check ModelTypes of data.
+- Now you can define your own custom function to validate values.
 
-### v1.0.1 model mapper attributes -
+### v1.0.2 model mapper attributes -
 
 - `key` is used to mapping key .
 - `default` values if validation failed.
-- `validate` check value type with defined in validation.
+- `validate` check value type with defined in validation. Now you can define your own custom function to validate values.
 
-It is still able to use version with `@ananay-nag/model-mapper@1.0.1`
+It is still able to use version with `@ananay-nag/model-mapper@1.0.2`
 
 ```js
-// v1.0.1
+// v1.0.2
 const { ModelBuilder, ModelTypes } = require("@ananay-nag/model-mapper");
 ```
 
@@ -48,6 +49,7 @@ const { ModelBuilder, ModelTypes } = require("@ananay-nag/model-mapper");
 let values = {
   name: "xyz",
   gender: "male",
+  email: "abc@xyz.com",
   age: 20,
   SSC: true,
   SSC_name: "abc",
@@ -60,9 +62,13 @@ let values = {
   hobbies: ["a", "b"],
 };
 
+function validEmail(v) {
+  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(v);
+}
 let mapModel = {
   name: { key: "name", default: "", validate: ModelTypes.STRING },
   gender: { key: "gender", default: "", validate: ModelTypes.STRING },
+  email: { key: "email", validate: validEmail },
   age: { key: "age", default: 0, validate: ModelTypes.NUMBER },
   qualification: {
     SSC: {
@@ -90,6 +96,7 @@ console.log(ModelBuilder(values, mapModel));
 {
     "name": "xyz",
     "gender": "male",
+    "email": "abc@xyz.com",
     "age": 20,
     "qualification": {
         "SSC": {
@@ -113,7 +120,8 @@ console.log(ModelBuilder(values, mapModel));
 */
 ```
 
-## v1.0.1 bench marks -
+## v1.0.2 bench marks -
+
 - `1 records` takes `0.538ms`.
 - `10 records` takes `1.203ms`.
 - `100 records` takes `2.473ms`.
