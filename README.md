@@ -1,6 +1,6 @@
 # model-mapper
 
-`@ananay-nag/model-mapper` map a plan json object model( from sql , excel , csv ) in to nested model.
+`@ananay-nag/model-mapper` map a simple json object model( from sql , excel , csv ) in to nested model.
 
 - Easy to use as modules
 - Easy to install
